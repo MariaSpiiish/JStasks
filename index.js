@@ -7,5 +7,4 @@ let alphabetToArr = alphabet.split('');
 
 let result = textToArr.map(elem => alphabetToArr.indexOf(elem));
 
-
 console.log(result);
