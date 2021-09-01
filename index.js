@@ -1,5 +1,5 @@
 // @flow
-let text /*: string */ = 'JavaScript';
+let text /*: string */ = ('JavaScript' /*: number */);
 let lowerStr /*: string */ = text.toLowerCase();
 let textToArr /*: Array<string> */ = lowerStr.split('');
 
