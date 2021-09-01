@@ -1,6 +1,6 @@
 // @flow
 let text /*: string */ = ('JavaScript' /*: string */);
-let lowerStr /*: string */ = text.toLowerCase();
+let lowerStr /*: string */ = (text.toLowerCase() /*: string */);
 let textToArr /*: Array<string> */ = lowerStr.split('');
 
 let alphabet /*: string */ = ' abcdefghijklmnopqrstuvwxyz';
