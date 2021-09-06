@@ -1,11 +1,10 @@
 // @flow
-let text /*: string */ = ('JavaScript' /*: string */);
-let lowerStr /*: string */ = (text.toLowerCase() /*: string */);
-let textToArr /*: Array<string> */ = lowerStr.split('');
+var text /*: string */ = ('JavaScript' /*: string */);
+var lowerStr /*: Array<string> */ = (text /* string */).toLowerCase().split('');
 
-let alphabet /*: string */ = ' abcdefghijklmnopqrstuvwxyz';
-let alphabetToArr /*: Array<string> */ = alphabet.split('');
+var alphabet /*: string */ = (' abcdefghijklmnopqrstuvwxyz' /* string */);
+var alphabetToArr /*: Array<string> */ = (alphabet /*: string */).split('');
 
-let result /*: Array<number> */= textToArr.map(elem => alphabetToArr.indexOf(elem));
+var result /*: Array<number> */= (lowerStr /*: Array<string> */).map(elem => (alphabetToArr /*: Array<string> */).indexOf(elem));
 
 console.log(result);
