@@ -1,10 +1,12 @@
-// @flow
-var text /*: string */ = ('JavaScript' /*: string */);
-var lowerStr /*: Array<string> */ = ((text /*: string */).(toLowerCase/*: Function */)().split('') /*: Array<string> */);
+const obj = {
+    a: 1,
+    b: 2,
+    c: undefined,
+    d: null,
+}
 
-var alphabet /*: string */ = (' abcdefghijklmnopqrstuvwxyz' /* string */);
-var alphabetToArr /*: Array<string> */ = (alphabet /*: string */).split('');
+function getFilteredObj(obj) {
+    return Object.fromEntries(Object.entries(obj).filter(([key, value]) => typeof value !== "undefined" && typeof value !== "object"));
+}
 
-var result /*: Array<number> */= (lowerStr /*: Array<string> */).map(elem => (alphabetToArr /*: Array<string> */).indexOf(elem));
-
-console.log(result);
+console.log(getFilteredObj(obj));
