@@ -1,12 +1,19 @@
+const { filter } = require("lodash");
+const _ = require("lodash");
+
 const obj = {
     a: 1,
     b: 2,
-    c: undefined,
-    d: null,
+    c: null,
+    d: undefined,
 }
 
-function getFilteredObj(obj) {
-    return Object.fromEntries(Object.entries(obj).filter(([key, value]) => typeof value !== "undefined" && typeof value !== "object"));
+function getFilteredArray(obj) {
+    const asArray = _.toPairs(obj);
+    const filtered = _.filter(asArray, function ([k, v]) {
+        return typeof v !== "undefined" && typeof v !== "object"
+    })
+    const obj2 = _.fromPairs(filtered);
+    return obj2;
 }
-
-console.log(getFilteredObj(obj));
+console.log(getFilteredArray(obj));
